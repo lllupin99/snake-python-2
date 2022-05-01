@@ -1,2 +1,2 @@
 # snake python
- a pytho n snake game
+ a python snake game
