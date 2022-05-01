@@ -1,6 +1,9 @@
 import pygame
 import sys
 import random
+import os
+pygame.mixer.pre_init (44100,16,2,4096)
+pygame.init ()
 
 class Snake():
     def __init__(self):
@@ -125,5 +128,10 @@ def main():
         text = myfont.render("Score {0}".format(snake.score), 1, (0,0,0))
         screen.blit(text, (5,10))
         pygame.display.update()
+ 
+ # Music/Sounds
+pygame.mixer.music.load("Jarico - Island.mp3")
+pygame.mixer.music.set_volume(1)
+pygame.mixer.music.play(-1)
 
 main()
